@@ -2,8 +2,8 @@
 const { title, definition, names } = Astro.props;
 ---
 
-<article class="flex flex-col gap-2">
-  <h3 class="text-[18px] font-medium">{title}</h3>
+<article class="flex flex-col gap-2 md:items-center md:p-2 md:border md:border-background-icons md:rounded-lg md:h-min">
+  <h3 class="text-[18px] font-medium md:text-center">{title}</h3>
   <p class="font-body text-text-body text-[14px]">{definition}</p>
   <div class="flex flex-wrap gap-2">
     {names && names.length > 0 ? (
