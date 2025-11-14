@@ -1,0 +1,19 @@
+---
+const { title, definition, names } = Astro.props;
+---
+
+<article class="flex flex-col gap-2">
+  <h3 class="text-[18px] font-medium">{title}</h3>
+  <p class="font-body text-text-body text-[14px]">{definition}</p>
+  <div class="flex flex-wrap gap-2">
+    {names && names.length > 0 ? (
+      names.map((name: any) => (
+        <span class="font-body text-text-subtitle bg-background-icons text-[12px] px-2 py-1 rounded-lg">
+          {name}
+        </span>
+      ))
+    ) : (
+      <></>
+    )}
+  </div>
+</article>

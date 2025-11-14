@@ -1,0 +1,8 @@
+---
+const { name, icoName } = Astro.props;
+---
+
+<div class="font-body text-text-title bg-background-icons text-[14px] px-2 py-1 rounded-lg flex items-center gap-2">
+  <iconify-icon icon={`mdi:${icoName}`} width="16" height="16"  inline />
+  <span class="relative top-0.5">{name}</span>
+</div>

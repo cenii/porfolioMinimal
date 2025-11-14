@@ -1,0 +1,20 @@
+---
+import Project from "../components/molecules/project.astro";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="flex flex-col gap-2">
+    <h2 class="font-titles font-bold color-text-title text-2xl">{t('projects.title')}</h2>
+    <Project
+        title={t('project.tasks_app.title')}
+        definition={t('project.tasks_app.description')}
+        names={["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "TypeScript", "JavaScript"]}
+        />
+    <Project
+        title={t('project.portfolio.title')}
+        definition={t('project.portfolio.description')}
+    />
+</section>

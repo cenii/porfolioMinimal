@@ -1,0 +1,19 @@
+---
+import HaederJobs from './molecules/haederJobs.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="flex flex-col gap-2">
+    <h2 class="font-titles font-bold color-text-title text-2xl">{t('jobs.title')}</h2>
+        <article class="flex flex-col gap-2">
+            <HaederJobs company="Globant" job="Front-End Developer" from="02/2025" to="06/2025" />
+            <p class="font-body text-text-body">{t('jobs.globant.description')}</p>
+        </article>
+        <article class="flex flex-col gap-2">
+            <HaederJobs company="Tech Solutions" job="Desarrollador Fullstack" from="01/2023" to="12/2024" />
+            <p class="font-body text-text-body">{t('jobs.techsolutions.description')}</p>
+        </article>
+</section>

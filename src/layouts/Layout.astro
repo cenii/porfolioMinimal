@@ -1,0 +1,23 @@
+---
+import '../styles/global.css'
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+---
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Hugo Ceniceros Olave - Desarrollador Fullstack y experto en ciberseguridad.</title>
+	</head>
+	<body>
+		<main class="flex flex-col gap-8 p-8 max-w-3xl mx-auto">
+			<slot />
+		</main>
+	</body>
+</html>
+
+

@@ -1,0 +1,39 @@
+---
+import '../styles/global.css'
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LenguageToggle from './molecules/lenguageToggle.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js" defer></script>
+<section class="flex flex-col gap-4">
+    <div>
+    <LenguageToggle/>
+    
+    </div>
+    <div class="text-center flex flex-col gap-2 md:text-start">
+        <div>
+            <h1 class="font-titles font-bold color-text-title text-3xl">{t('hero.nombre')}</h1>
+            <h2 class="font-titles text-text-subtitle">{t('hero.subtitle')}</h2>
+                <span class="flex flex-row justify-center items-center gap-2 font-body text-text-body md:justify-start"> 
+                    <iconify-icon icon="mdi:world" width="20" height="20" inline></iconify-icon>
+                    {t('hero.location')}
+                </span>
+
+        </div>
+        <div class="flex gap-4 justify-center md:justify-start">
+            <a href="" class="flex items-center gap-2 border border-text-subtitle px-2 py-2 rounded-lg hover:bg-background-icons">
+                <iconify-icon class="text-text-subtitle" icon="mdi:file-document-outline" width="20" height="20" inline></iconify-icon>
+                <span class="sr-only">{t('hero.link.cv')}</span>
+            </a>
+            <a href="https://github.com/cenii" aria-label={t('hero.link.github')} class="flex items-center gap-2 border border-icons px-2 py-2 rounded-lg hover:bg-background-icons">
+                <iconify-icon class="text-text-subtitle" icon="mdi:github" width="20" height="20" inline></iconify-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/HugoCenicerosOlave" aria-label={t('hero.link.linkedin')} class="flex items-center gap-2 border border-icons px-2 py-2 rounded-lg hover:bg-background-icons">
+                <iconify-icon class="text-text-subtitle" icon="mdi:linkedin" width="20" height="20" inline></iconify-icon>
+            </a>
+        </div>
+    </div>
+    
+</section>
