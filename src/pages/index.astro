@@ -1,0 +1,9 @@
+---
+import { defaultLang, showDefaultLang } from '../i18n/ui';
+
+const redirectPath = showDefaultLang 
+  ? `/${defaultLang}/` 
+  : '/';
+
+return Astro.redirect(redirectPath);
+---
