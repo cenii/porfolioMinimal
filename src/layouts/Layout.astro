@@ -1,17 +1,24 @@
 ---
-import '../styles/global.css'
-import { getLangFromUrl } from '../i18n/utils';
+import "../styles/global.css";
+import { getLangFromUrl } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 ---
+
 <!doctype html>
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="icon/ico" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Hugo Ceniceros Olave - Desarrollador Fullstack y experto en ciberseguridad.</title>
+		<title>
+			Hugo Ceniceros Olave - Desarrollador Fullstack y experto en
+			ciberseguridad.
+		</title>
+		<script
+			src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"
+			defer></script>
 	</head>
 	<body>
 		<main class="flex flex-col gap-8 p-8 max-w-3xl mx-auto">
@@ -19,5 +26,3 @@ const lang = getLangFromUrl(Astro.url);
 		</main>
 	</body>
 </html>
-
-
