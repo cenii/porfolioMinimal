@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import LenguageToggle from "./molecules/lenguageToggle.astro";
+import Image from "astro/components/Image.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -15,11 +16,7 @@ const t = useTranslations(lang);
         <LenguageToggle />
     </div>
     <div class="md:flex md:flex-row-reverse md:justify-between">
-        <img
-            src="/avatar.png"
-            alt="Avatar"
-            class="w-32 h-32 rounded-full mx-auto md:mx-0"
-        />
+        <Image src={"/avatar.png"} alt="Avatar" width={120} height={120} loading="lazy"/>
         <div class="text-center flex flex-col gap-2 md:text-start">
             <div>
                 <h1 class="font-titles font-bold color-text-title text-3xl">
@@ -38,8 +35,9 @@ const t = useTranslations(lang);
             </div>
             <div class="flex gap-4 justify-center md:justify-start">
                 <a
-                    href=""
+                    href="/Curriculum_Hugo_Ceniceros.pdf"
                     class="flex items-center gap-2 border border-text-subtitle px-2 py-2 rounded-lg hover:bg-background-icons"
+                    download="/Curriculum_Hugo_Ceniceros.pdf"
                 >
                     <iconify-icon
                         class="text-text-subtitle"
