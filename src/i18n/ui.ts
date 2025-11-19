@@ -44,11 +44,11 @@ export const ui = {
         'hero.link.linkedin': 'Abrir LinkedIn',
 
         'about.title': 'Sobre mí',
-        'about.description': 'Soy un desarrollador fullstack con experiencia en la creación de aplicaciones web y móviles. Me apasiona la tecnología y siempre estoy buscando aprender nuevas habilidades y mejorar mis conocimientos.',
+        'about.description': 'Soy un desarrollador fullstack, actualmente estudiando un curso de especialización en ciberseguridad. Me apasiona la tecnología y siempre estoy aprendiendo nuevas habilidades para mejorar. Me destaco por mi capacidad de adaptación y aprendizaje rápido, aparte de ser un gran comunicador y buen compañero de equipo.',
 
         'education.title': 'Educación',
-        'education.description_1': 'Cursé estudios en ingeniería informática, adquiriendo conocimientos en programación, desarrollo de software, bases de datos y redes. Participé en proyectos prácticos que me permitieron aplicar mis habilidades técnicas.',
-        'education.description_2': 'Completé un curso intensivo de desarrollo web fullstack, donde aprendí a crear aplicaciones web utilizando tecnologías como HTML, CSS, JavaScript, Node.js y React. Desarrollé varios proyectos prácticos durante el curso.',
+        'education.description_1': 'Estudié el ciclo formativo de grado superior en desarrollo de aplicaciones web, adquiriendo conocimientos en programación, desarrollo de software, bases de datos y algo de redes.',
+        'education.description_2': 'Actualmente estoy cursando una especialización en ciberseguridad, donde estoy aprendiendo sobre protección de sistemas, redes y datos contra amenazas y ciberataques.',
 
         'skills.title': 'Habilidades',
 
@@ -59,7 +59,7 @@ export const ui = {
         'project.portfolio.description': 'Creé un sitio web de portafolio personal utilizando Astro y Tailwind CSS. El sitio presenta mis proyectos, habilidades y experiencia laboral, y está optimizado para SEO y rendimiento.',
 
         'jobs.title': 'Experiencia laboral',
-        'jobs.globant.description': 'Desarrollé y mantuve aplicaciones web utilizando tecnologías como React, Node.js y MongoDB. Colaboré con equipos multifuncionales para entregar proyectos de alta calidad a tiempo.',
-        'jobs.techsolutions.description': 'Participé en el desarrollo de aplicaciones web y móviles, trabajando con tecnologías como JavaScript, Python y SQL. Implementé soluciones escalables y optimizadas para mejorar el rendimiento de las aplicaciones.'
+        'jobs.globant.description': 'Aquí aporte todo mi conocimiento sobre el desarrollo web, sobre todo centrado en el Frontend, aprendí a gestionar la entrega a tiempo de proyectos así como trabajar profesionalmente en equipo internacional. Estuve trabajando con tecnologías como Astro, Next.js, React y Liquid Sopify entre otras.',
+        'jobs.techsolutions.description': 'Mi labor en este puesto de trabajo era, desde el montaje de equipos y su mantenimiento, recuperación de datos y preparación de equipos TPV hasta montaje y mantenimiento de servidores.'
     }
 } as const
