@@ -5,14 +5,14 @@ import { getLangFromUrl, useTranslatedPath } from '../../i18n/utils';
 const currentLang = getLangFromUrl(Astro.url) ?? "";
 const translatePath = useTranslatedPath(currentLang as any);
 ---
-<div>
-    <span class="flex flex-row max-w-min rounded-full bg-background-icons p-1 gap-1 border border-background-focus">
+<div class="flex justify-end">
+    <span class="flex flex-row max-w-min rounded-full bg-background-icons p-1 gap-1 ">
   {Object.entries(languages).map(([lang, label]) => (
       <a 
-        class={`px-3 py-2 rounded-full font-body font-medium transition-all duration-800 ease-in-out text-sm ${
+        class={`px-2 rounded-full font-body font-medium transition-all duration-800 ease-in-out text-sm ${
           currentLang === lang
-            ? 'bg-background-primary text-text-title shadow-md border border-background-focus'
-            : 'bg-transparent text-text-subtitle hover:bg-background-focus hover:text-text-title'
+            ? 'bg-background-primary text-text-subtitle shadow-md'
+            : 'bg-transparent text-text-subtitle hover:bg-background-focus hover:text-text-subtitle'
         }`}
         href={translatePath("/", lang)}
       >
