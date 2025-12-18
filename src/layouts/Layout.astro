@@ -10,12 +10,50 @@ const lang = getLangFromUrl(Astro.url);
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="icon/ico" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO -->
 		<title>
 			Hugo Ceniceros Olave - Desarrollador Fullstack y experto en
 			ciberseguridad.
 		</title>
+		<meta
+			name="description"
+			content="Desarrollador fullstack y experto en ciberseguridad. Especializado en crear aplicaciones web modernas y seguras."
+		/>
+		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta
+			property="og:title"
+			content="Hugo Ceniceros Olave - Fullstack Developer"
+		/>
+		<meta
+			property="og:description"
+			content="Desarrollador fullstack y experto en ciberseguridad. Portafolio profesional."
+		/>
+		<meta property="og:image" content={new URL("/avatar.png", Astro.url)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta
+			property="twitter:title"
+			content="Hugo Ceniceros Olave - Fullstack Developer"
+		/>
+		<meta
+			property="twitter:description"
+			content="Desarrollador fullstack y experto en ciberseguridad. Portafolio profesional."
+		/>
+		<meta
+			property="twitter:image"
+			content={new URL("/avatar.png", Astro.url)}
+		/>
+
 		<script
 			src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"
 			defer></script>

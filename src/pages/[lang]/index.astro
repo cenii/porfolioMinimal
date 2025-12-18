@@ -1,12 +1,20 @@
 ---
-	
-import Hero from '../../components/Hero.astro';
-import About from '../../components/About.astro';
-import Jobs from '../../components/Jobs.astro';
-import Education from '../../components/Education.astro';
-import Projects from '../../components/Projects.astro';
-import Habilities from '../../components/Habilities.astro';
-import Layout from '../../layouts/Layout.astro';
+import Hero from "../../components/Hero.astro";
+import About from "../../components/About.astro";
+import Jobs from "../../components/Jobs.astro";
+import Education from "../../components/Education.astro";
+import Projects from "../../components/Projects.astro";
+import Habilities from "../../components/Habilities.astro";
+import Layout from "../../layouts/Layout.astro";
+import { languages } from "../../i18n/ui";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+	return Object.keys(languages).map((lang) => {
+		return { params: { lang } };
+	});
+}
 ---
 
 <Layout>

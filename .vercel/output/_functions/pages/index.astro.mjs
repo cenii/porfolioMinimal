@@ -1,10 +1,10 @@
-import { c as createComponent, a as createAstro } from '../chunks/astro/server_Dz2Mg84L.mjs';
+import { c as createAstro, a as createComponent } from '../chunks/astro/server_CpqH38Fn.mjs';
 import 'piccolore';
 import 'clsx';
 import { d as defaultLang } from '../chunks/ui_CfTu7mVZ.mjs';
 export { renderers } from '../renderers.mjs';
 
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://mysite.com");
 const $$Index = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Index;

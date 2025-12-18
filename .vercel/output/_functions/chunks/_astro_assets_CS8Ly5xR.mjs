@@ -1,5 +1,5 @@
 import { a as isRemoteAllowed, j as joinPaths, i as isRemotePath } from './remote_BOTgX_u2.mjs';
-import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, U as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, g as UnsupportedImageConversion, t as toStyleString, N as NoImageMetadata, h as FailedToFetchRemoteImageDimensions, i as ExpectedImageOptions, j as ExpectedNotESMImage, k as InvalidImageService, c as createComponent, a as createAstro, l as ImageMissingAlt, m as maybeRenderHead, b as addAttribute, s as spreadAttributes, r as renderTemplate, n as ExperimentalFontsNotEnabled, o as FontFamilyNotFound, u as unescapeHTML } from './astro/server_Dz2Mg84L.mjs';
+import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, U as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, g as UnsupportedImageConversion, t as toStyleString, N as NoImageMetadata, h as FailedToFetchRemoteImageDimensions, i as ExpectedImageOptions, j as ExpectedNotESMImage, k as InvalidImageService, c as createAstro, a as createComponent, l as ImageMissingAlt, m as maybeRenderHead, b as addAttribute, s as spreadAttributes, r as renderTemplate, n as ExperimentalFontsNotEnabled, o as FontFamilyNotFound, u as unescapeHTML } from './astro/server_CpqH38Fn.mjs';
 import * as mime from 'mrmime';
 import 'clsx';
 import 'piccolore';
@@ -1225,7 +1225,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './sharp_Blj4lBUN.mjs'
+      './sharp_WCAFr-lL.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -1380,7 +1380,7 @@ async function getImage$1(options, imageConfig) {
   };
 }
 
-const $$Astro$2 = createAstro();
+const $$Astro$2 = createAstro("https://mysite.com");
 const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$Image;
@@ -1409,7 +1409,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<img${addAttribute(image.src, "src")}${spreadAttributes(attributes)}${addAttribute(className, "class")}>`;
 }, "C:/Users/Administrator/Desktop/porfolio/porfolio/porfolioMinimal/node_modules/astro/components/Image.astro", void 0);
 
-const $$Astro$1 = createAstro();
+const $$Astro$1 = createAstro("https://mysite.com");
 const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Picture;
@@ -1519,7 +1519,7 @@ function checkWeight(input, target) {
   return input === target;
 }
 
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://mysite.com");
 const $$Font = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Font;
