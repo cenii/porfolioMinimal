@@ -8,7 +8,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   output: 'server',
   adapter: vercel(),
-  site: 'https://mysite.com',
+  site: 'https://hugoceniceros.com',
   vite: {
     plugins: [tailwindcss()]
   },

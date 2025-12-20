@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mysite.com/sitemap-index.xml
+Sitemap: https://hugoceniceros.com/sitemap-index.xml
