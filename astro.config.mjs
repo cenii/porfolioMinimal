@@ -8,17 +8,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   output: 'server',
   adapter: vercel(),
-<<<<<<< HEAD
-  i18n: {
-    defaultLocale: 'es',
-    locales: ['es', 'en'],
-    routing: {
-      prefixDefaultLocale: false,
-      fallbackType: 'rewrite' // Importante: esto evita que Vercel busque una redirección física
-    }
-  },
-=======
->>>>>>> ac96525 (dominio)
   site: 'https://hugoceniceros.com',
   vite: {
     plugins: [tailwindcss()]
