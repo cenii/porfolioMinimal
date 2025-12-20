@@ -13,7 +13,7 @@ export default defineConfig({
     locales: ['es', 'en'],
     routing: {
       prefixDefaultLocale: false,
-      fallbackType: 'rewrite'
+      fallbackType: 'rewrite' // Importante: esto evita que Vercel busque una redirección física
     }
   },
   site: 'https://hugoceniceros.com',
