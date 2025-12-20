@@ -1,14 +1,16 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import vercelServerless from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel/serverless';
 
 import sitemap from '@astrojs/sitemap';
 
 // Configuración SSR
 export default defineConfig({
   output: 'server',
-  adapter: vercelServerless(),
+  adapter: vercel({
+    functionPerRoute: false,
+  }),
   site: 'https://hugoceniceros.com',
   i18n: {
     defaultLocale: 'es',
