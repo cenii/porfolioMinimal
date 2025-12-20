@@ -4,45 +4,73 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const PROJECTS = [
+    {
+        title: t("project.tasks_app.title"),
+        definition: t("project.tasks_app.description"),
+        names: [
+            "React",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Tailwind CSS",
+            "TypeScript",
+            "JavaScript",
+        ],
+    },
+    {
+        title: t("project.portfolio.title"),
+        definition: t("project.portfolio.description"),
+    },
+    {
+        title: t("project.portfolio.title"),
+        definition: t("project.portfolio.description"),
+    },
+    {
+        title: t("project.portfolio.title"),
+        definition: t("project.portfolio.description"),
+    },
+    {
+        title: t("project.portfolio.title"),
+        definition: t("project.portfolio.description"),
+    },
+];
 ---
 
 <section class="flex flex-col gap-2">
     <h2 class="font-titles font-bold color-text-title text-2xl">
         {t("projects.title")}
     </h2>
-    <div class="flex flex-col gap-4 md:grid md:grid-cols-2">
-        <div class="md:flex md:flex-col md:gap-4">
-            <Project
-                title={t("project.tasks_app.title")}
-                definition={t("project.tasks_app.description")}
-                names={[
-                    "React",
-                    "Node.js",
-                    "Express",
-                    "MongoDB",
-                    "Tailwind CSS",
-                    "TypeScript",
-                    "JavaScript",
-                ]}
-            />
-            <Project
-                title={t("project.portfolio.title")}
-                definition={t("project.portfolio.description")}
-            />
+    <div
+        id="projects-carousel"
+        class="flex flex-nowrap items-start overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:pb-0 md:grid md:grid-cols-2 md:gap-4 md:overflow-visible md:snap-none"
+    >
+        <div class="contents md:flex md:flex-col md:gap-4">
+            {
+                PROJECTS.slice(0, 2).map((project) => (
+                    <div class="min-w-full snap-center md:min-w-0">
+                        <Project
+                            title={project.title}
+                            definition={project.definition}
+                            names={project.names}
+                        />
+                    </div>
+                ))
+            }
         </div>
-        <div class="md:flex md:flex-col md:gap-4">
-            <Project
-                title={t("project.portfolio.title")}
-                definition={t("project.portfolio.description")}
-            />
-            <Project
-                title={t("project.portfolio.title")}
-                definition={t("project.portfolio.description")}
-            />
-            <Project
-                title={t("project.portfolio.title")}
-                definition={t("project.portfolio.description")}
-            />
+        <div class="contents md:flex md:flex-col md:gap-4">
+            {
+                PROJECTS.slice(2).map((project) => (
+                    <div class="min-w-full snap-center md:min-w-0">
+                        <Project
+                            title={project.title}
+                            definition={project.definition}
+                            names={project.names}
+                        />
+                    </div>
+                ))
+            }
         </div>
     </div>
 </section>
