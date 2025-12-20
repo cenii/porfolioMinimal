@@ -1,12 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+import vercel from '@astrojs/vercel';
 
 import sitemap from '@astrojs/sitemap';
 
-// Configuración estática - el i18n funciona perfectamente con static site generation
+// Configuración SSR
 export default defineConfig({
-  output: 'static',
+  output: 'server',
+  adapter: vercel(),
   site: 'https://hugoceniceros.com',
   i18n: {
     defaultLocale: 'es',

@@ -1,14 +1,13 @@
-import { c as createAstro, a as createComponent, r as renderComponent, b as renderTemplate } from '../chunks/astro/server_B5s_srhx.mjs';
+import { c as createAstro, a as createComponent } from '../chunks/astro/server_CpqH38Fn.mjs';
 import 'piccolore';
-import { $ as $$Index$1 } from '../chunks/index_Bfu6ogaJ.mjs';
+import 'clsx';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro("https://hugoceniceros.com");
 const $$Index = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Index;
-  Astro2.params.lang = "es";
-  return renderTemplate`${renderComponent($$result, "Page", $$Index$1, {})}`;
+  return Astro2.redirect("/es");
 }, "C:/Users/Administrator/Desktop/porfolio/porfolioMinimal/src/pages/index.astro", void 0);
 
 const $$file = "C:/Users/Administrator/Desktop/porfolio/porfolioMinimal/src/pages/index.astro";

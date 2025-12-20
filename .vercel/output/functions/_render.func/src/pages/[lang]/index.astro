@@ -8,12 +8,10 @@ import Habilities from "../../components/Habilities.astro";
 import Layout from "../../layouts/Layout.astro";
 import { languages } from "../../i18n/ui";
 
-export const prerender = true;
+const { lang } = Astro.params;
 
-export function getStaticPaths() {
-	return Object.keys(languages).map((lang) => {
-		return { params: { lang } };
-	});
+if (!lang || !Object.keys(languages).includes(lang)) {
+	return Astro.redirect("/es");
 }
 ---
 
