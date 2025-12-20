@@ -12,8 +12,8 @@ export default defineConfig({
     defaultLocale: 'es',
     locales: ['es', 'en'],
     routing: {
-      prefixDefaultLocale: false, // Si quieres que el español sea tudominio.com/
-      fallbackType: 'redirect'    // Esto es clave para evitar el Server Error
+      prefixDefaultLocale: false,
+      fallbackType: 'rewrite'
     }
   },
   site: 'https://hugoceniceros.com',

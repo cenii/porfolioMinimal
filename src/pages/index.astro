@@ -1,7 +1,11 @@
 ---
-import { defaultLang, showDefaultLang } from "../i18n/ui";
+// src/pages/index.astro
+// Este archivo captura la entrada a "/" y renderiza el idioma por defecto
+import Page from "./[lang]/index.astro";
 
-const redirectPath = "/es/";
+export function getStaticPaths() {
+  return [{ params: { lang: "es" } }];
+}
 
-return Astro.redirect(redirectPath);
+const { lang = "es" } = Astro.params;
 ---
