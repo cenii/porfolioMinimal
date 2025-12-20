@@ -8,9 +8,16 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   output: 'static',
   site: 'https://hugoceniceros.com',
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    routing: {
+      prefixDefaultLocale: true,
+      redirectToDefaultLocale: false
+    }
+  },
   vite: {
     plugins: [tailwindcss()]
   },
-
   integrations: [sitemap()]
 });
