@@ -1,5 +1,5 @@
-import { g as getConfiguredImageService, i as imageConfig } from '../chunks/_astro_assets_CS8Ly5xR.mjs';
-import { i as isRemotePath, a as isRemoteAllowed } from '../chunks/remote_BOTgX_u2.mjs';
+import { g as getConfiguredImageService, i as imageConfig } from '../chunks/_astro_assets_BMtMWtlt.mjs';
+import { i as isRemotePath, a as isRemoteAllowed } from '../chunks/index_Bbn-n_hR.mjs';
 import * as mime from 'mrmime';
 export { renderers } from '../renderers.mjs';
 

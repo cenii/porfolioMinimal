@@ -1,9 +1,8 @@
 ---
-import { defaultLang, showDefaultLang } from '../i18n/ui';
+// src/pages/index.astro
+import Page from "./[lang]/index.astro";
 
-const redirectPath = showDefaultLang 
-  ? `/${defaultLang}/` 
-  : '/';
-
-return Astro.redirect(redirectPath);
+Astro.params.lang = "es";
 ---
+
+<Page />
