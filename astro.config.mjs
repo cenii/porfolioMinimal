@@ -10,14 +10,6 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
   site: 'https://hugoceniceros.com',
-  i18n: {
-    defaultLocale: 'es',
-    locales: ['es', 'en'],
-    routing: {
-      prefixDefaultLocale: true,
-      redirectToDefaultLocale: false
-    }
-  },
   vite: {
     plugins: [tailwindcss()]
   },
