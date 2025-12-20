@@ -1,11 +1,9 @@
 ---
 // src/pages/index.astro
-// Este archivo captura la entrada a "/" y renderiza el idioma por defecto
 import Page from "./[lang]/index.astro";
 
-export function getStaticPaths() {
-  return [{ params: { lang: "es" } }];
-}
-
-const { lang = "es" } = Astro.params;
+// Forzamos que este componente use 'es' como idioma
+Astro.params.lang = "es";
 ---
+
+<Page />
