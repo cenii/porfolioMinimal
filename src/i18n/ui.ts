@@ -19,8 +19,12 @@ export const ui = {
         'about.description': 'I am a fullstack developer with experience building web and mobile applications. I love technology and I am always learning new skills to improve my craft.',
 
         'education.title': 'Education',
-        'education.description_1': 'I studied computer engineering, gaining knowledge in programming, software development, databases and networks. I participated in practical projects that allowed me to apply my technical skills.',
-        'education.description_2': 'I completed an intensive fullstack web development course where I learned to build web applications using HTML, CSS, JavaScript, Node.js and React. I developed several practical projects during the course.',
+        'education.cybersecurity.title': 'Cybersecurity Specialization Course',
+        'education.cybersecurity.description': 'Advanced professional training in ethical hacking, network hardening, forensic analysis, and IT environment security regulations.',
+        'education.daw.title': 'Higher Technician in Web Application Development',
+        'education.daw.description': 'Comprehensive training in fullstack development, including interface design, backend logic, database management, and application deployment.',
+        'education.smr.title': 'Technician in Microcomputer Systems and Networks',
+        'education.smr.description': 'Foundational technical training focused on hardware assembly, software installation, local network configuration, and system maintenance.',
 
         'skills.title': 'Skills',
 
@@ -51,8 +55,12 @@ export const ui = {
         'about.description': 'Soy un desarrollador fullstack, actualmente estudiando un curso de especialización en ciberseguridad. Me apasiona la tecnología y siempre estoy aprendiendo nuevas habilidades para mejorar. Me destaco por mi capacidad de adaptación y aprendizaje rápido, aparte de ser un gran comunicador y buen compañero de equipo.',
 
         'education.title': 'Educación',
-        'education.description_1': 'Estudié el ciclo formativo de grado superior en desarrollo de aplicaciones web, adquiriendo conocimientos en programación, desarrollo de software, bases de datos y algo de redes.',
-        'education.description_2': 'Actualmente estoy cursando una especialización en ciberseguridad, donde estoy aprendiendo sobre protección de sistemas, redes y datos contra amenazas y ciberataques.',
+        'education.cybersecurity.title': 'Curso de Especialización en Ciberseguridad',
+        'education.cybersecurity.description': 'Formación profesional avanzada en hacking ético, bastionado de redes, análisis forense y normativas de seguridad en entornos TI.',
+        'education.daw.title': 'Técnico Superior en Desarrollo de Aplicaciones Web',
+        'education.daw.description': 'Formación completa en desarrollo fullstack, incluyendo diseño de interfaces, lógica de backend, gestión de bases de datos y despliegue de aplicaciones.',
+        'education.smr.title': 'Técnico en Sistemas Microinformáticos y Redes',
+        'education.smr.description': 'Formación técnica base centrada en el montaje de equipos, instalación de software, configuración de redes locales y mantenimiento de sistemas.',
 
         'skills.title': 'Habilidades',
 

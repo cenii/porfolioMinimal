@@ -1,27 +1,36 @@
 ---
 import HeaderEducation from "./molecules/headerEducation.astro";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <section class="flex flex-col gap-2">
-    <h2 class="font-titles font-bold color-text-title text-2xl">{t('education.title')}</h2>
+    <h2 class="font-titles font-bold color-text-title text-2xl">
+        {t("education.title")}
+    </h2>
     <article class="flex flex-col gap-2">
-        <HeaderEducation
-            name="IES Comercio"
-            from="09/2020"
-            to="06/2024"
-        />
-        <p class="font-body text-text-body">{t('education.description_1')}</p>
+        <HeaderEducation name="IES Comercio" from="10/2025" to="06/2026" />
+        <h3 class="font-titles text-text-title">
+            {t("education.cybersecurity.title")}
+        </h3>
+        <p class="font-body text-text-body">
+            {t("education.cybersecurity.description")}
+        </p>
     </article>
     <article class="flex flex-col gap-2">
-        <HeaderEducation
-            name="IES Comercio"
-            from="01/2022"
-            to="12/2022"
-        />
-        <p class="font-body text-text-body">{t('education.description_2')}</p>
+        <HeaderEducation name="IES Comercio" from="09/2023" to="06/2025" />
+        <h3 class="font-titles text-text-title">
+            {t("education.daw.title")}
+        </h3>
+        <p class="font-body text-text-body">{t("education.daw.description")}</p>
+    </article>
+    <article class="flex flex-col gap-2">
+        <HeaderEducation name="IES Comercio" from="09/2021" to="06/2023" />
+        <h3 class="font-titles text-text-title">
+            {t("education.smr.title")}
+        </h3>
+        <p class="font-body text-text-body">{t("education.smr.description")}</p>
     </article>
 </section>
