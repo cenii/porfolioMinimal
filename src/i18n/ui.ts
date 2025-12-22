@@ -75,7 +75,7 @@ export const ui = {
         'project.encrypted_chat.description': 'Aplicación de mensajería en tiempo real con Encriptación de Extremo a Extremo. Construida con Node.js y React, usa WebSockets y generación local de claves.',
 
         'jobs.title': 'Experiencia laboral',
-        'jobs.globant.description': 'Aquí aporte todo mi conocimiento sobre el desarrollo web, sobre todo centrado en el Frontend, aprendí a gestionar la entrega a tiempo de proyectos así como trabajar profesionalmente en un equipo internacional. Estuve trabajando con tecnologías como Astro, Next.js, React, Liquid Sopify y Tailwind entre otras.',
+        'jobs.globant.description': 'Aquí aporté todo mi conocimiento sobre el desarrollo web, sobre todo centrado en el Frontend, aprendí a gestionar la entrega a tiempo de proyectos así como trabajar profesionalmente en un equipo internacional. Estuve trabajando con tecnologías como Astro, Next.js, React, Liquid Shopify y Tailwind entre otras.',
         'jobs.tecnoplus.description': 'Mi labor en este puesto de trabajo era, desde el montaje de equipos y su mantenimiento, recuperación de datos y preparación de equipos TPV hasta montaje y mantenimiento de servidores. Me sirvió mucho para aprender a trabajar con diferentes sistemas y aprender a resolver problemas técnicos.'
     }
 } as const

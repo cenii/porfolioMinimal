@@ -1,36 +1,73 @@
 ---
-import HeaderEducation from "./molecules/headerEducation.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="flex flex-col gap-2">
+<section class="flex flex-col gap-4">
     <h2 class="font-titles font-bold color-text-title text-2xl">
         {t("education.title")}
     </h2>
-    <article class="flex flex-col gap-2">
-        <HeaderEducation name="IES Comercio" from="10/2025" to="06/2026" />
-        <span>
-            {t("education.cybersecurity.title")}
-        </span>
-        <p class="font-body text-text-body">
-            {t("education.cybersecurity.description")}
-        </p>
-    </article>
-    <article class="flex flex-col gap-2">
-        <HeaderEducation name="IES Comercio" from="09/2023" to="06/2025" />
-        <span>
-            {t("education.daw.title")}
-        </span>
-        <p class="font-body text-text-body">{t("education.daw.description")}</p>
-    </article>
-    <article class="flex flex-col gap-2">
-        <HeaderEducation name="IES Comercio" from="09/2021" to="06/2023" />
-        <span>
-            {t("education.smr.title")}
-        </span>
-        <p class="font-body text-text-body">{t("education.smr.description")}</p>
-    </article>
+    <div class="relative flex flex-col gap-6 ml-2">
+        {
+            [
+                {
+                    institution: "IES Comercio",
+                    from: "10/2025",
+                    to: "06/2026",
+                    title: "education.cybersecurity.title",
+                    description: "education.cybersecurity.description",
+                    hash: "4a9d1c",
+                },
+                {
+                    institution: "IES Comercio",
+                    from: "09/2023",
+                    to: "06/2025",
+                    title: "education.daw.title",
+                    description: "education.daw.description",
+                    hash: "7f2b8e",
+                },
+                {
+                    institution: "IES Comercio",
+                    from: "09/2021",
+                    to: "06/2023",
+                    title: "education.smr.title",
+                    description: "education.smr.description",
+                    hash: "3c5a9b",
+                },
+            ].map((item, index, array) => (
+                <div class="flex gap-4 relative">
+                    {index !== array.length - 1 && (
+                        <div class="absolute left-[19px] top-8 bottom-[-24px] w-0.5 bg-icons/30 z-0" />
+                    )}
+
+                    <div class="relative z-10 flex-none mt-1">
+                        <div class="w-10 h-10 rounded-full bg-background-primary border-2 border-icons flex items-center justify-center">
+                            <div class="w-3 h-3 rounded-full bg-icons" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-1 pt-1 w-full">
+                        <div class="flex flex-wrap items-baseline gap-x-3 text-sm text-text-body font-mono">
+                            <span class="text-icons">commit {item.hash}</span>
+                            <span>
+                                {item.from} - {item.to}
+                            </span>
+                        </div>
+
+                        <h3 class="text-[18px] font-medium">
+                            {t(item.title as any)}
+                        </h3>
+
+                        <span>{item.institution}</span>
+
+                        <p class="mt-1 text-base font-normal text-text-body font-body pl-2 border-l-2 border-icons/20">
+                            {t(item.description as any)}
+                        </p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
 </section>
