@@ -1,19 +1,25 @@
 ---
 import Habilitie from "./molecules/habilitie.astro";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <section class="flex flex-col gap-2">
-    <h2 class="font-titles font-bold color-text-title text-2xl">{t('skills.title')}</h2>
+    <h2 class="font-titles font-bold color-text-title text-2xl">
+        {t("skills.title")}
+    </h2>
     <div class="flex flex-wrap gap-2">
         <Habilitie name="JavaScript" icoName="language-javascript" />
         <Habilitie name="TypeScript" icoName="language-typescript" />
         <Habilitie name="React" icoName="react" />
         <Habilitie name="Node.js" icoName="nodejs" />
-        <Habilitie name="MongoDB" icoName="database" />
+        <Habilitie name="Java" icoName="language-java" />
+        <Habilitie name="PHP" icoName="language-php" />
+        <Habilitie name="Python" icoName="language-python" />
+        <Habilitie name="SQL" icoName="database" />
+        <Habilitie name="PostgreSQL" icoName="database" />
         <Habilitie name="HTML5" icoName="language-html5" />
         <Habilitie name="CSS3" icoName="language-css3" />
         <Habilitie name="Tailwind CSS" icoName="tailwind" />
